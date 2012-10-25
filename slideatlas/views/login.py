@@ -12,8 +12,8 @@ oid = OpenID()
 oauth = OAuth()
 
 # Facebook key redirecting to localhost:8080
-FACEBOOK_APP_ID = '458796434162322'
-FACEBOOK_APP_SECRET = '32cce59abab133519ccc51470c8b32f4'
+FACEBOOK_APP_ID = '119067998250051'
+FACEBOOK_APP_SECRET = 'a59f02dfa257a385273f22ed061257e4'
 
 facebook = oauth.remote_app('facebook',
     base_url='https://graph.facebook.com/',
@@ -79,7 +79,7 @@ def facebook_authorized(resp=None):
     if userdoc == None:
         # Not found, create one
         userdoc = dbobj["users"].User()
-        userdoc["'type"] = 'facebook'
+        userdoc["type"] = 'facebook'
         userdoc["name"] = me.data['email']
         userdoc["label"] = me.data['name']
         userdoc.save()
@@ -119,7 +119,7 @@ def login_google(oid_response=None):
         if userdoc == None:
             # Not found, create one
             userdoc = dbobj["users"].User()
-            userdoc["'type"] = 'google'
+            userdoc["type"] = 'google'
             userdoc["name"] = oid_response.email
             userdoc["label"] = oid_response.fullname
             userdoc.save()
