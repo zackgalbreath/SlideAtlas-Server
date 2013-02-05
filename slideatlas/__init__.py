@@ -17,7 +17,7 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = "d:/docs"
 
 # Connection settings for local demo database for testing (VM) 
-slconn = mongokit.Connection("127.0.0.1:27018", tz_aware=False, auto_start_request=False)
+slconn = mongokit.Connection("127.0.0.1:27017", tz_aware=False, auto_start_request=False)
 admindb = slconn["admin"]
 
 ## Connection settings for live slide atlas  

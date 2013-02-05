@@ -1,4 +1,4 @@
-//==============================================================================
+ //==============================================================================
 // This widget will first be setup to define an arrow.
 // Viewer will forward events to the arrow.
 // TODO: I need to indicate that the base of the arrow has different active
@@ -292,7 +292,14 @@ ArrowWidget.prototype.ShowPropertiesDialog = function () {
   //  lengthLabel.innerHTML = "Length: " + (this.Shape.Length).toFixed(2) + " units";
   //}
   
-  $("#arrow-properties-dialog").dialog("open");
+  
+  //document.getElementById("arrow-properties-dialog").style.visibility = "visible";
+  
+  //$("#arrow-properties-dialog").dialog("open");
+  
+  $("#arrowModal .modal-body #arrowcolor").val(color.value);
+  
+  $("#arrowModal").modal("show");
 }    
 
 

@@ -5,7 +5,7 @@
 #}
 
 {% block body_content %}
-<div class="navbar navbar-inverse navbar-fixed-top" id="topnavbar" >
+<!--<div class="navbar navbar-inverse navbar-fixed-top" id="topnavbar" >
   <div class="navbar-inner ">
     <div class="container">
       
@@ -25,7 +25,7 @@
       </div> 
   </div>
   </div>
-</div>
+</div>-->
 
 <div class="container">
 

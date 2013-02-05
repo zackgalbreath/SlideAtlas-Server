@@ -31,8 +31,8 @@ var GL;
 
 function initGL(canvas) {
     try {
-        canvas.width =  canvas.clientWidth;
-        canvas.height= canvas.clientHeight;
+        canvas.width = canvas.clientWidth;
+        canvas.height = canvas.clientHeight;
 
         canvas.style.width =  canvas.clientWidth + "px";
         canvas.style.height= canvas.clientHeight+ "px";
