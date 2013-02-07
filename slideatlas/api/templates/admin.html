@@ -1,17 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
+{% extends "base.html" %}
 
-<html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>admin</title>
-	<meta name="generator" content="Studio 3 http://aptana.com/">
-	<meta name="author" content="dhanannjay.deo">
-	<!-- Date: 2013-02-06 -->
-    <!-- link rel="stylesheet" href="/static/css/screen.css"-->
-</head>
-<body>
-    <div id="databases"/>
+{% block body_content %}
+{{ super() }}
+  <div class="container">
+  <div class="row">
+    <div id="databases">
+    </div>
+  </div>
+  </div>
 
     <script id="dbTemplate" type="text/template">
         <ul>
@@ -25,5 +21,4 @@
     <script src="/static/js/backbone-min.js"></script>
     <script src="/static/js/jquery-1.9.1.min.js"></script>
     <script src="static/app.js"></script>
-</body>
-</html>
+{% endblock %}
