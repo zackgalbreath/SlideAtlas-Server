@@ -3,7 +3,7 @@ rest api for administrative interface
 refer to documentation
 """
 
-from flask import Blueprint, render_template, request, url_for, current_app
+from flask import Blueprint, render_template, request, url_for, current_app, Response
 from flask.views import MethodView
 from bson import ObjectId
 from slideatlas import slconn as conn
@@ -11,10 +11,10 @@ from slideatlas import model
 from slideatlas import common_utils
 from celery.platforms import resource
 
-
-
 mod = Blueprint('api', __name__,
-                url_prefix="/apiv1"
+                url_prefix="/apiv1",
+                template_folder="templates",
+                static_folder="static",
                 )
 
 # The url valid for databases, rules and users with supported queries
@@ -115,3 +115,9 @@ def session_object_request(dbid, sessid, restype, resid):
     # See if the user is requesting any session id
     return "you want : %s, %s, %s, %s" % (dbid, sessid, restype, resid)
 
+@mod.route('/admin')
+def admin_main():
+    """
+    - /tile/4e695114587718175c000006/t.jpg  searches and returns the image
+    """
+    return Response(render_template("admin.html"))
