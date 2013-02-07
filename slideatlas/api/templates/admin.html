@@ -4,16 +4,21 @@
 {{ super() }}
   <div class="container">
   <div class="row">
+    <h2> List of databases </h2>
     <div id="databases">
     </div>
   </div>
   </div>
 
     <script id="dbTemplate" type="text/template">
-        <ul>
-            <li><%= host %></li>
-            <li><%= label %></li>
-        </ul>
+    <table class="table table-bordered table-hover" >
+        <tr>
+            <td><%= host %></td>
+        </tr>
+         <tr>
+           <td><%= label %></td>
+        </tr>
+    </table>
     </script>
     <script src="/static/js/jquery-1.9.1.min.js"></script>
     <script src="/static/js/jquery-migrate-1.1.0.min.js"></script>
