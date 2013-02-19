@@ -19,6 +19,13 @@ def upload():
         # we are expected to save the uploaded file and return some infos about it:
         #                              vvvvvvvvv   this is the name for input type=file
         names = []
+        print request.headers["Content-Range"]
+
+#        response = make_response("Something nice")
+#        response.headers['Range'] = '0-9999'
+#        response.headers['Content-Length'] = '0'
+#        response.status = 308
+        return Response("", headers={"Range" : "0-9999"}, status=308)
 
         for file in request.files.getlist('files[]'):
             filename = secure_filename(file.filename)
