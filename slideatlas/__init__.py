@@ -30,6 +30,7 @@ if  app.config["LOGIN_REQUIRED"]:
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 
 app.config['BOOTSTRAP_USE_MINIFIED'] = False
+app.config['BOOTSTRAP_USE_CDN'] = True
 
 class RegexConverter(BaseConverter):
     def __init__(self, url_map, *items):

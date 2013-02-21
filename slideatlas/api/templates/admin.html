@@ -2,6 +2,7 @@
 
 {% block body_content %}
   {{ super() }}
+ 
   <div ng-app="adminapi" class="container">
   <div class="row">
   <!-- for debug
@@ -12,7 +13,20 @@
   {% endraw %}
 -->
 
-  <a href=""> <h2> Databases </h2> </a>
+    <div class="btn-group">
+    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    Admin
+    <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu" role="menu">
+      <!-- dropdown menu links -->
+              
+      <li> <a role="menuitem" href="#/databases"> Databases </a> </li>
+      <li> <a role="menuitem" tabindex="-1" href="#/users"> Users </a> </li>
+      <li> <a role="menuitem" tabindex="-1" href="#/rules"> Rules </a> </li>
+     </ul>
+    </div>
+
 
   <ng-view> </ng-view>
   </div>
@@ -27,5 +41,9 @@
             angular.bootstrap(document);
         });
     </script-->
-
+    <script>
+        var lis = $(".nav li");
+        lis.removeClass("active");
+        $('#adminmenu').addClass('active');
+    </script>
 {% endblock %}

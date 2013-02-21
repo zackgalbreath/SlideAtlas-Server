@@ -20,11 +20,13 @@
       <a class="brand" href="/home">Digital Slide Atlas</a>
       <div class="nav-collapse collapse">
         <ul class="nav">
-          <li class="active"> <a href="/home">Home</a></li>
-          <li><a href="/login">login</a></li>
-          <li><a href="/apiv1/admin#/">admin</a></li>
-          <li><a href="/sessions">sessions</a></li>
-          <li><a href="/logout">logout</a></li>
+              <li id="homemenu" class="active"> <a href="/home">Home</a></li>
+              <li id="sessmenu"><a href="/sessions">sessions</a></li>
+              <li id="adminmenu"><a href="/apiv1/admin#/">admin</a></li>
+          </ul>
+          <ul class="nav pull-right" >
+              <li id="loginmenu"><a href="/login">login</a></li>
+              <li id="logoutmenu"><a href="/logout">logout</a></li>
         </ul>
       </div> 
   </div>
@@ -78,4 +80,3 @@
 </div>
 
 {% endblock %}
-

@@ -33,3 +33,12 @@
 </div>
 {% endblock %}
 
+{% block bootstrap_js_bottom %}
+{{ super() }}
+<script>
+    var lis = $(".nav li");
+    lis.removeClass("active");
+    $('#loginmenu').addClass('active');
+</script>
+{% endblock %}
+
